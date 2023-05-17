@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      #navbar{
+        width: 100%;
+        height: 60px;
+        background-color: black;
+        display: flex;
+      }
+      #navbar>h2{
+        color: white;
+        margin-top: 16px;
+        margin-left: 28px;
+      }
+      #navbar>p:nth-child(3){
+        color: white;
+        margin-left: 200px;
+        margin-top: 20px;
+      }
+      #navbar>p:nth-child(4){
+        color: white;
+        margin-left: 50px;
+        margin-top: 20px;
+      }
+      #navbar>input{
+        width: 20%;
+        height: 20px;
+        margin-top: 20px;
+        margin-left: 650px;
+      }
+
+      #sorting{
+        height: 60px;
+        width: 100%;
+        background-color: #9efdd5;
+      }
+      #sorting>button{
+        margin-left: 300px;
+        margin-top: 20px;
+        background-color: #ddbc8e;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="navbar">
+      <h2>Hotel App</h2>
+      <input id="query" type="text" placeholder="Scarch hotels here">
+      <p id="login">Log-in</p>
+      <p id="signup">sign-up</p>
+      <!-- the search-box id:- "query"
+ - the log-in and sign-up link will have ids:- "login" and "signup" -->
+    </div>
+    <div id="sorting">
+      <button>Price low to high</button>
+      <button>Price high to low</button>
+      <button>AC</button>
+      <button>Non-AC</button>
+      <!-- sort by price low to high Id:- "sort_lth"
+ - sort by price high to low Id:- "sort_htl"
+ - Filter Ac hotels Id:- "filter_ac"
+ - Filter Non Ac hotels Id:- "filter_nonac" -->
+    </div>
+    <div>
+      <!-- - Append all fetched hotels inside div with id:- "hotels_list"
+ - Every hotel card will have id:-  "hotel"
+ - The book now button will have class as "book" -->
+    </div>
+  </body>
+</html>

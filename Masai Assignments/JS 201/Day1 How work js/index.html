@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="winner">Winner</div>
+    <div id="member1">member A</div>
+    <div id="member2">member B</div>
+    <div id="member3">member C</div>
+    <button id="roll" onClick="rollDice()">ROLL THE BUTTON</button>
+</body>
+</html>
+
+<script>
+    function rollDice() {
+      let member1 =  document.querySelector("#member1");
+      let member2 =  document.querySelector("#member2");
+      let member3 =  document.querySelector("#member3");
+
+     
+        // event.preventDefault();
+        var ran1 = Math.floor(Math.random()*6)+1;
+        var ran2 = Math.floor(Math.random()*6)+1;
+        var ran3 = Math.floor(Math.random()*6)+1;
+        member1.innerText=ran1;
+        member2.innerText=ran2;
+        member3.innerText=ran3;
+        if(ran1>ran2 && ran1>ran3 && ran2>ran3){
+            document.querySelector("#winner").innerText="Winner is Member1";
+            member1.style.background="green";
+            member2.style.background="yellow";
+            member3.style.background="red";
+        }else if(ran1>ran2 && ran1>ran3 && ran3>ran2){
+            document.querySelector("#winner").innerText="Winner is Member1";
+            member1.style.background="green";
+            member3.style.background="yellow";
+            member2.style.background="red";
+        }else if(ran2>ran1 && ran2>ran3 && ran1>ran3){
+            document.querySelector("#winner").innerText="Winner is Member2";
+            member2.style.background="green";
+            member1.style.background="yellow";
+            member3.style.background="red";
+
+        }else if(ran2>ran1 && ran2>ran3 && ran3>ran1){
+            document.querySelector("#winner").innerText="Winner is Member2";
+            member2.style.background="green";
+            member3.style.background="yellow";
+            member1.style.background="red";
+
+        }else if(ran3>ran1 && ran3>ran2 && ran1>ran2){
+            document.querySelector("#winner").innerText="Winner is Member3";
+            member3.style.background="green";
+            member1.style.background="yellow";
+            member2.style.background="red";
+        }else if(ran3>ran1 && ran3>ran2 && ran2>ran1){
+            document.querySelector("#winner").innerText="Winner is Member3";
+            member3.style.background="green";
+            member2.style.background="yellow";
+            member1.style.background="red";
+        }
+        else if((ran3<ran1 && ran3<ran2) && ran1==ran2){
+            document.querySelector("#winner").innerText="draw for Member 1 & Member 2 & Member 3 lose";
+            member1.style.background="rgb(83,189,235)";
+            member2.style.background="rgb(83,189,235)";
+            member3.style.background="red";
+        }else if((ran2<ran1 && ran2<ran3) && ran1==ran3){
+            document.querySelector("#winner").innerText="draw for Member 1 & Member 3 & Member 2 lose";
+            member2.style.background="red";
+            member1.style.background="rgb(83,189,235)";
+            member3.style.background="rgb(83,189,235)";
+            
+        }else if((ran1<ran2 && ran1<ran3) && ran3==ran2){
+            document.querySelector("#winner").innerText="draw for Member 2 & Member 3 & Member 1 lose";
+            member2.style.background="rgb(83,189,235)";
+            member3.style.background="rgb(83,189,235)";
+            member1.style.background="red";
+        }else if(ran1 == ran2 && ran1== ran3){
+            document.querySelector("#winner").innerText=" All members draw same number"
+            member2.style.background="rgb(83,189,235)";
+            member1.style.background="rgb(83,189,235)";
+            member3.style.background="rgb(83,189,235)";
+        }
+    }
+</script>

@@ -1,0 +1,13 @@
+Pre requisites
+1.Destructuring
+2.Arrow function
+3.Spread operators
+4.Rest operators
+5.Default params
+6.Ternary operators
+7.Mutability & immutability
+8.Closure,Promises,Async Await,Fetch,Get post,Put,Patch
+9.Higher order function - .map,.filter,.sort,.reduce
+10.json-server API & Crud Operation
+
+application made by student -https://tvapple-clone.netlify.app/

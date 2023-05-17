@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <style>
+        .product{
+            border: 1px solid black transparent;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            justify-content: space-evenly;
+            gap: 30px;
+        }
+        #mbox{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1></h1>
+    
+ <div class="product">
+    
+ </div>
+    
+
+</body>
+</html>
+
+<script>
+    let dataFromLS= JSON.parse(localStorage.getItem("Products")) || [];
+    // console.log(dataFromLS);
+
+    displaydata(dataFromLS);
+
+    function displaydata(dataFromLS){
+    let counter=0;
+    
+    document.querySelector(".product").innerHTML="";
+    dataFromLS.forEach(function(ele){
+    counter++;
+    let box=document.createElement("div");    
+    box.setAttribute("id","mbox");
+
+
+    let image=document.createElement("img");
+    image.setAttribute("src" , ele.image);
+
+    let name=document.createElement("h2");
+    name.innerText=ele.name;
+
+    let category=document.createElement("p");
+    category.innerText=ele.category;
+
+    let price=document.createElement("p");
+    price.innerText=ele.price;
+
+    let gender=document.createElement("p");
+    gender.innerText=ele.ling;
+
+    let remove=document.createElement("button");
+    remove.innerText="Remove";
+    remove.addEventListener("click" , function(){
+        removeData(ele.name)
+    })
+    remove.addEventListener("click" , incfunction);
+    function incfunction(){
+        counter--;
+        document.querySelector("h1").innerText=counter;
+        
+    }
+    
+    let sold=document.createElement("button")
+    sold.innerText="Sold";
+    sold.setAttribute("id", "sold")
+    sold.setAttribute("value", "false")
+    sold.addEventListener("click" , function(){
+    let s=document.querySelector("#sold")
+    s.toggleAttribute("disabled")
+    console.log(s)
+    })
+    box.append(image,name,category,price,gender,remove,sold)
+    document.querySelector(".product").append(box);
+    document.querySelector("h1").innerText=counter;
+    })
+
+    }
+
+    function removeData(naam){
+    let deleted=dataFromLS.filter(function(ele){
+    return ele.name!==naam;
+    })
+    dataFromLS=deleted
+    localStorage.setItem("Products" , JSON.stringify(dataFromLS))
+    displaydata(dataFromLS)
+}
+
+</script>

@@ -1,0 +1,11 @@
+document.createElement VS React.createElement
+
+document.createElement return html dom element
+React.createElement return a object which represents dom
+
+reactElement VS reactComponents
+
+components are set of elements.components are self-contained units with all the logic,markup,data and event handlers for that UI containers.
+Elements are that the users will see.
+Components are JS functions (called by react)
+Elements are JS objects.

@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <title>Practise Selectors</title>
+</head>
+
+<body>
+    <h1>First H1</h1>
+    <h1>Second H1</h1>
+    <h3>First H3</h3>
+    <h3>Second H3</h3>
+    <h5>First H5</h5>
+    <h5>Second H5</h5>
+    <h5>Third H5</h5>
+    <div class="green">First DIV</div>
+    <div class="red">Second DIV</div>
+    <div class="blue">Third DIV</div>
+    <p class="green">First P</p>
+    <p class="red">Second P</p>
+    <p class="blue">Third P</p>
+    <hr/>
+    <button>Change H1</button>
+    <button>Change H3</button>
+    <button id="btn3">Change H5</button>
+    <button id="btn4">Change Green</button>
+    <button id="btn5">Change Red</button>
+    <button id="btn6">Change Blue</button>
+    
+</body>
+
+</html>
+
+<script>
+    document.querySelector("hr+button").addEventListener("click",forHeading1)
+    function forHeading1(){
+        document.querySelector("h1").style.color="red";
+    }
+    document.querySelector("button+button").addEventListener("click",forHeading3)
+    function forHeading3(){
+        let h3 = document.querySelectorAll("h3");
+        for(let i=0;i<h3.length;i++){
+            h3[i].style.color="green"
+        }
+    }
+    document.querySelector("#btn3").addEventListener("click",forHeading5)
+    function forHeading5(){
+        let h5 = document.querySelectorAll("h5")
+        for(let i=0;i<h5.length;i++){
+            h5[i].style.color="blue"
+        }
+    }
+    document.querySelector("#btn4").addEventListener("click",changeGreen)
+    function changeGreen(){
+        let chng = document.querySelectorAll(".green")
+        for(let i=0;i<chng.length;i++){
+            chng[i].style.color="green"
+        }
+    }
+    document.querySelector("#btn5").addEventListener("click",changeRed)
+    function changeRed(){
+        let chng1 = document.querySelectorAll(".red")
+        for(let i=0;i<chng1.length;i++){
+            chng1[i].style.color="red"
+        }
+    }
+    document.querySelector("#btn6").addEventListener("click",changeBlue)
+    function changeBlue(){
+        let chng2 = document.querySelectorAll(".blue")
+        for(let i=0;i<chng2.length;i++){
+            chng2[i].style.color="blue"
+        }
+    }
+</script>

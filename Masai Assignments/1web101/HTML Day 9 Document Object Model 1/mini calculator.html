@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>mini calculator</title>
+</head>
+
+<body>
+    <input type="text" placeholder="enter 1st Number" id="number1">
+    <input type="text" placeholder="enter 2nd Number"
+    id="number2">
+    <br><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Substract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">Divide</button>
+</body>
+
+</html>
+
+<script>
+    function add(){
+        let number1 = document.querySelector("#number1").value;
+        let number2 = document.querySelector("#number2").value;
+        alert(Number(number1)+Number(number2));
+    }
+    function sub(){
+        let number1 = document.querySelector("#number1").value;
+        let number2 = document.querySelector("#number2").value;
+        alert(number1-number2);
+    }
+    function mul(){
+        let number1 = document.querySelector("#number1").value;
+        let number2 = document.querySelector("#number2").value;
+        alert(number1*number2);
+    }
+
+    function div(){
+        let number1 = document.querySelector("#number1").value;
+        let number2 = document.querySelector("#number2").value;
+        alert(number1/number2);
+    }
+</script>

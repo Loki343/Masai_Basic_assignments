@@ -1,0 +1,9 @@
+1.open the folder where you want to get json-server data
+2.command - npm init
+3.package name - give project name
+4.hit enter some times
+5.now we can see package.json in folder
+6.npm install --save json-server
+7.now we can see node_modules and package-lock.json in folder
+8.json-server --watch db.json
+9.after this we get the server

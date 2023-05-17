@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button{
+        font-size: 40px;
+        border-radius: 5px;
+    }
+    button:hover{
+        background-color: teal;
+    }
+    h1{
+        font-size: 50px;
+    }
+</style>
+<body>
+    <h1></h1>
+    <button>Increment</button>
+    <button>Decrement</button>
+</body>
+</html>
+
+<script>
+    let count = localStorage.getItem("localCounter") || 0;
+
+    // if (localStorage.getItem("localCounter") == null) {
+    //     count = 0;
+    // }else{
+    //     count = localStorage.getItem("localCounter");
+    // }
+
+    document.querySelector("h1").innerText = count;
+
+    document.querySelector("h1+button").addEventListener("click",funInc);
+    function funInc(){
+        count++;
+        document.querySelector("h1").innerText = count;
+        localStorage.setItem("localCounter",count)
+    }
+
+    document.querySelector("button+button").addEventListener("click",funDec);
+    function funDec(){
+        count--;
+        document.querySelector("h1").innerText = count;
+        localStorage.setItem("localCounter",count)
+    }
+</script>

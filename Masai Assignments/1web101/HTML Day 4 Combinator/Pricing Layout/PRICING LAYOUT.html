@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>PRICING LAYOUT</title>
+    <style>
+        #heading-box{
+            text-align: center;
+            border: px solid;
+            height: 300px;
+            width: 35%;
+            margin: auto;
+            
+        }
+        #heading-box>h1{
+            font-size: 50px;
+        }
+        #heading-box>p{
+            font-size: 21.5px;
+            color: gray;
+        }
+        #main-box{
+            width: 70%;
+            height: 500px;
+            border: px solid;
+            margin: auto;
+            display: flex;
+        }
+        #main-box>div{
+            border: px solid red;
+            height: 100%;
+            width: 27%;
+            margin: auto;
+            border-radius: 10%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        #main-box>div>h2{
+            text-align: center;
+            margin-top: 30px;
+            font-size: 28px;
+        }
+        #main-box>div>p{
+            text-align: center;
+            margin-top: 30px;
+        }
+        #main-box>div>h1{
+            text-align: center;
+        }
+        #main-box>div>p+p{
+            font-size: 22px;
+            line-height: 30px;
+            margin-left: 9%;
+            margin-right:9% ;
+        }
+        #main-box>div>p+p+button{
+            border: 1px solid blue;
+            color: blue;
+            height: 12%;
+            width: 70%;
+            border-radius: 10px;
+            margin-left: 50px;
+            margin-top: 50px;
+            font-size: larger;
+            font-weight: 700;
+        }
+        #main-box>div:first-child>h1{
+            color: green;
+        }
+        #main-box>div:last-child>h1{
+            color: blue;
+        }
+        #main-box>div:nth-child(2)>h1{
+            color: rgb(208, 191, 3);
+        }
+    </style>
+</head>
+<body>
+    <div id="heading-box">
+        <h1>Choose a plan that right for your business</h1>
+        <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</p>
+    </div>
+    <div id="main-box">
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>Free</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>$39.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+            <button>Start Now</button>
+        </div>
+        <div>
+            <h2>Starter Plan</h2>
+            <h1>$59.00</h1>
+            <p>Per month</p>
+            <p>We collect reviews from our users so you can get an honest opinion of what an experience with our website</p>
+            <button>Start Now</button>
+        </div>
+    </div>
+</body>
+</html>

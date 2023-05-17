@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mq layout 1</title>
+    <style>
+        #head{
+            background-color: yellow;
+            width: 60%;
+            height: 70px;
+            margin: auto;
+            font-size: 40px;
+            display: flex;
+            margin-top: 350px;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+        #box{
+            width: 60%;
+            height: 200px;
+            border: px solid;
+            margin: auto;
+            display: grid;
+            gap: 20px;
+            grid-template-rows: 250px;
+            grid-template-columns: repeat(4,1fr);
+        }
+        #box>div{
+            border: px solid;
+            color: rgb(65, 64, 64);
+            margin-top: 20px;
+            font-size: 30px;
+            padding-left: 10px;
+            padding-top: 10px;
+        }
+        #box>div:nth-child(1){
+            background-color: red;
+        }
+        #box>div:nth-child(2){
+            background-color: green;
+        }
+        #box>div:nth-child(3){
+            background-color: rgb(118, 99, 205);
+        }
+        #box>div:nth-child(4){
+            background-color: gray;
+        }
+            @media all and (min-width:480px) and (max-width:720px){
+                #box{
+                grid-template-rows: repeat(2,250px);
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+            @media all and (min-width:300px) and (max-width:479px){
+                #box{
+                grid-template-rows: repeat(4,250px);
+                grid-template-columns: repeat(1,1fr);
+            }
+        }    
+    </style>
+</head>
+<body>
+    <div id="head">Navigation</div>
+    <div id="box">
+        <div>Box 1</div>
+        <div>Box 2</div>
+        <div>Box 3</div>
+        <div>Box 4</div>
+    </div>
+</body>
+</html>

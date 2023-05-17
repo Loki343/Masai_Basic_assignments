@@ -1,0 +1,4 @@
+In JSX we can write vanilla JS in curly brackets{}
+
+difference between forEach and Map
+map can return but forEach cant return anything ,forEach is like for loop.example - https://replit.com/@KausikBhaumik/diffBetweenMapandforEach#1.js

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button dom with forEach</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    Arrobj=[{name:"Primary",backgroundcolor:"blue",color:"white"},
+            {name:"Secondary",backgroundcolor:"gray",color:"white"},
+            {name:"Success",backgroundcolor:"green",color:"white"},
+            {name:"Danger",backgroundcolor:"red",color:"white"},
+            {name:"Warning",backgroundcolor:"yellow",color:"black"},
+            {name:"Info",backgroundcolor:"teal",color:"white"},
+            {name:"Light",backgroundcolor:"white",color:"black"},
+            {name:"Dark",backgroundcolor:"black",color:"white"},
+            {name:"Link",backgroundcolor:"white",color:"blue"}
+        ];
+    Arrobj.forEach(function(element,index,arr) {
+        let btn = document.createElement("button");
+        document.querySelector("body").append(btn);
+        btn.innerText=element.name;
+        btn.style.color=element.color;
+        btn.style.backgroundColor=element.backgroundcolor;
+        btn.style.border=" 0px";
+        btn.style.fontSize="30px";
+        btn.style.margin="10px";
+        btn.style.borderRadius="5px";
+    });
+</script>

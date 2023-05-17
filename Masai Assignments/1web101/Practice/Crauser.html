@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caruser</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .caruser{
+            width: 100%;
+            position: relative;
+        }
+        .caruser>img{
+            width: 100%;
+        }
+        .caruser>button{
+            position: absolute;
+            top: 300px;
+            background-color: rgba(77, 77, 77, 0.5);
+            border-radius: 100%;
+            font-size: 20px;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border: 1px solid;
+        }
+        .caruser>button:hover{
+            background-color: rgb(142, 26, 26);
+        }
+        .caruser>button:nth-child(2){
+            left: 2%;
+        }
+        .caruser>button:nth-child(3){
+            right: 2%;
+        }
+    </style> 
+</head>
+<body>
+    <div class="caruser">
+        <img src="https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png" alt="">
+        <button><</button>
+        <button>></button>
+    </div>
+</body>
+</html>
+
+<script>
+    let img = document.querySelector("img");
+    let buttons = document.querySelectorAll("button");
+    let imgNum = 0;
+    let imgArray = [
+        "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider1.png",
+        "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider2.png",
+        "https://raw.githubusercontent.com/Sourav12061999/react-3D-movie-app/main/public/slider3.png"
+    ]
+    buttons[0].addEventListener("click",function(){
+        if(imgNum == 0){
+            imgNum = imgArray.length-1;
+        }else{
+            imgNum--;
+        }
+        img.src = imgArray[imgNum];
+        
+        // img.setAttribute("src",) in this way we also can
+    })
+    buttons[1].addEventListener("click",function(){
+        if(imgNum == imgArray.length-1){
+            imgNum = 0;
+        }else{
+            imgNum++;
+        }
+        img.src = imgArray[imgNum];
+    })
+
+</script>

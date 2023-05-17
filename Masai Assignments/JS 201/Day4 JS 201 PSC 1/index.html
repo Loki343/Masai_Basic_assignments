@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="navbar"> 
+        
+    </div>
+    <br>
+    <button>
+        <a href="./dashboard.html">Dashboard</a>
+    </button>
+    <h1>Add Students Data</h1>
+    <form action="" id="students_data" >
+        <input type="text" id="name" placeholder="Name">
+        <br><br>
+        <input type="text" id="course" placeholder="Course">
+        <br><br>
+        <input type="number" id="unit" placeholder="Unit">
+        <br><br>
+        <input type="text" id="image" placeholder="Image">
+        <br><br>
+        <input type="number" id="batch" placeholder="Ft-web Batch No." >
+        <br><br>
+        <input type="submit">
+    </form>
+</body>
+</html>
+
+<script>
+    function Student(n,c,u,i,b){
+        this.name=n;
+        this.course=c;
+        this.unit=`unit-${u}`;
+        this.image=i;
+        this.batch=`Ft-web${b}`;
+    }
+    document.querySelector("form").addEventListener("submit",storeData)
+    function storeData(event){
+        event.preventDefault();
+        let form =document.querySelector("#students_data");
+        let name = form.name.value;
+        let course = form.course.value;
+        let unit = form.unit.value;
+        let image = form.image.value;
+        let batch = form.batch.value;
+        
+        let s1 = new Student(name,course,unit,image,batch)
+
+        let data = JSON.parse(localStorage.getItem("students")) || [];
+
+        data.push(s1);
+
+        localStorage.setItem("students",JSON.stringify(data));
+    }
+
+    function calculate () {
+        let data = JSON.parse(localStorage.getItem("students")) || [];
+        let obj = {};
+
+        for (let i=0; i<data.length; i++) {
+            if (!obj[data[i].batch]) {
+                obj[data[i].batch] = 0;
+            }
+        }
+        for (let i=0; i<data.length; i++) {
+                obj[data[i].batch]++;
+            }
+        let nav = document.querySelector("#navbar")
+        nav.append( JSON.stringify(obj) );
+    }
+    calculate ();
+</script>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderBoard</title>
+    <style>
+        #parent {
+            width: 35%;
+            height: 70px;
+            border: 1px solid transparent;
+            display: flex;
+            justify-content: space-around;
+            margin: auto;
+            text-align: center;
+        }
+
+        #red {
+            width: 18%;
+            height: 70px;
+            border: 3px solid;
+            background-color: red;
+            font-size: 30px;
+
+        }
+
+        #green {
+            width: 15%;
+            height: 70px;
+            border: 3px solid;
+            background-color: green;
+            font-size: 30px;
+        }
+
+        #red1 {
+            width: 10%;
+            height: 70px;
+            border: 1px solid transparent;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        #green1 {
+            width: 10%;
+            height: 70px;
+            border: 3px solid;
+            border: 1px solid transparent;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 15px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        #score {
+            text-align: center;
+            font-size: 30px;
+        }
+
+        #gray {
+            height: 70px;
+            border: 3px solid;
+            width: 19.5%;
+            margin-left: 40%;
+            background-color: gray;
+        }
+
+        #numbers {
+            width: 20%;
+            height: 340px;
+            border: px solid;
+            margin-left: 40%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 85px);
+            gap: 30px;
+            
+        }
+
+        #numbers>div {
+            border: 2px solid;
+            justify-content: center;
+            align-items: center;
+            font-size: large;
+        }
+
+        #enter {
+            border: 1px solid;
+            width: 10%;
+            margin-left: 45%;
+            background-color: black;
+            color: aliceblue;
+        }
+
+        .yellow-green {
+            background-color: rgb(77, 115, 8);
+        }
+
+        .orange {
+            background-color: rgb(216, 112, 14);
+        }
+        
+        #zeroo{
+            height: 70px;
+            border: 2px solid;
+            width: 5%;
+            margin-left: 47.5%;
+            background-color: rgb(121, 29, 121);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="parent">
+        <div id="red">
+            <p>43</p>
+        </div>
+        <div id="green">
+            <p>2019</p>
+        </div>
+    </div>
+    <div id="parent">
+        <div id="red1">MIN</div>
+        <div id="green1">MAX</div>
+    </div>
+    <p id="score">SCORE</p>
+    <div id="gray">
+        <p>#</p>
+    </div>
+    <br>
+    <div id="numbers">
+        <div class="yellow-green"><p>1</p></div>
+        <div class="orange"><p>2</p></div>
+        <div class="yellow-green"><p>3</p></div>
+        <div class="orange"><p>4</p></div>
+        <div class="orange"><p>5</p></div>
+        <div class="orange"><p>6</p></div>
+        <div class="yellow-green"><p>7</p></div>
+        <div class="orange"><p>8</p></div>
+        <div class="yellow-green"><p>9</p></div>
+        
+    </div>
+    <div id="zeroo"><p>0</p></div>
+    <br>
+    <div id="enter">
+        <p>ENTER</p>
+    </div>
+</body>
+
+</html>

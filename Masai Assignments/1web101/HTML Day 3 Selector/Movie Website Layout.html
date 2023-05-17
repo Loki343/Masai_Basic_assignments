@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <title>css box model</title>
+</head>
+<style>
+    body{
+        margin-top: 0px; 
+        margin-bottom: 0px; 
+        margin-left: 0px; 
+        margin-right: 0px;
+        padding: 0;
+    }
+    /* #main{
+        height: 450px;
+        width: 935px;
+        background-color: white;
+    } */
+    #main_div1{
+        width: 935px;
+        height: 450px;
+        display: flex;
+        margin-left: 490px;
+    }
+    #main_div2{
+        width: 935px;
+        height: 450px;
+        display: flex;
+        margin-left: 490px;
+        margin-top: 15px;
+    }
+    .box{
+        height: 440px;
+        width: 300px;
+        margin: 5px;
+    }
+    img{
+        width: 300px;
+        margin-left: 5px;
+    }
+    .name{
+        text-align: center;
+    }
+    button{
+        display: block;
+        margin: auto;
+        background-color: #49cfd4;
+        border: 0px;
+    }
+</style>
+<body>
+    <div id="main">
+        <div id="main_div1">
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Doctor-Strange--In-The-Multiverse-Of-Madness-r-705x750-36f0e140-b752-11ec-a762-319bdb0970f2.jpg" alt="Dr.Strange">
+                <h3 class="name"><b>Doctor Strange 2</b></h3>
+                <p class="name">Rating:4.5</p>
+                <button>Book now</button>
+            </div>
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/bb2--705x750-cbc15240-8a94-11ec-8efd-6d205f33f529.jpg" alt="Dr.Strange">
+                <h3 class="name">Bhool Bhulaiya 2</h3>
+                <p class="name">Rating:4.2</p>
+                <button>Book now</button>
+            </div>
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Jayeshbhai-Jordaar---705x750-660c01c0-cf7c-11ec-98b3-41c37f260d1c.jpg" alt="Dr.Strange">
+                <h3 class="name">Jayeshbhai Jordaar</h3>
+                <p class="name">Rating:4.3</p>
+                <button>Book now</button>
+            </div>
+         </div>
+        <div id="main_div2">
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/Jurassic-World--Dominion-705x750-b554ee90-cd51-11ec-8d22-2363945d80ef.jpg
+                " alt="Dr.Strange">
+                <h3 class="name">Jurasic World</h3>
+                <p class="name">Rating:4.6</p>
+                <button>Book now</button>
+            </div>
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/KGF-705x750-76008750-b6fd-11ec-9639-8322852eadd4.jpg" alt="Dr.Strange">
+                <h3 class="name">KGF 2</h3>
+                <p class="name">Rating:4.5</p>
+                <button>Book now</button>
+            </div>
+            <div class="box">
+                <img src="https://assetscdn1.paytm.com/images/cinema/RRR-North-705x750-fd78d9c0-693d-11ec-bbcd-5d122dc4018b.jpg" alt="Dr.Strange">
+                <h3 class="name">RRR</h3>
+                <p class="name">Rating:4.5</p>
+                <button>Book now</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+basic react syntax - https://codesandbox.io/s/reactcomponents1-zy4qqo
+without button component - https://codesandbox.io/s/reactcomponents2-oqv1fh?file=/src/App.js
+with button component & properties - https://codesandbox.io/s/reactcomponents2-forked-jpnrrs
+with button,avatar component & properties - https://codesandbox.io/s/reactcomponents2-forked-5sl6nk
+dynamic avatar - https://codesandbox.io/s/reactcomponents2-forked-068lxx
+with map function & button - https://codesandbox.io/s/reactcomponents2-forked-9lotys

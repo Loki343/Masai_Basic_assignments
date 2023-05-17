@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country continent</title>
+</head>
+
+<body>
+    <select name="Country" id="country_select">
+        <option value="select">Select Option -</option>
+        <option value="India">India</option>
+        <option value="United States of America">United States of America</option>
+        <option value="China">China</option>
+        <option value="Nepal">Nepal</option>
+        <option value="Australia">Australia</option>
+        <option value="France">France</option>
+        <option value="Germany">Germany</option>
+        <option value="South Africa">South Africa</option>
+        <option value="Nigeria">Nigeria</option>
+        <option value="Mexico">Mexico</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Brazil">Brazil</option>
+        <option value="Canada">Canada</option>
+        <option value="Singapore">Singapore</option>
+        <option value="Sweden">Sweden</option>
+    </select>
+    <button>Find Continent</button>
+    <h1></h1>
+</body>
+
+</html>
+
+<script>
+    let contries = document.querySelector("#country_select");
+    let btn = document.querySelector("button");
+    btn.addEventListener("click",showContinent);
+    function showContinent() {
+        switch (contries.value) {
+            case "India":
+                continent = "Asia";
+                break;
+            case "United States of America":
+                continent = "North America";
+                break;
+            case "China":
+                continent = "Asia";
+                break;
+            case "Nepal":
+                continent = "Asia";
+                break;
+            case "Australia":
+                continent = "Osiania";
+                break;
+            default:
+                continent="Select Option";
+                break;
+        }
+        let head = document.querySelector("h1");
+        head.innerText = "the continent is"+" "+continent;
+        alert("the continent is"+" "+continent);
+    }
+</script>

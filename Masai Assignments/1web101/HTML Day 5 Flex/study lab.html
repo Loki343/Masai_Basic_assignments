@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #navbar {
+            width: 100%;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        }
+        #navbar > div:first-child {
+            font-size: 25px;
+            margin-left: 50px;
+            background-color: #7c66e6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+            padding: 0px 20px;
+        }
+        #box {
+            display: flex;
+            justify-content: space-between;
+            width:50%;
+            margin-right: 50px;
+        }
+        #box div {
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #box>div:nth-child(1){
+            color: #7c66e6;
+        }
+        #box div:hover {
+            color: #7c66e6;
+            cursor: pointer;
+        }
+        #main {
+            display: flex;
+        }
+        #intro {
+            margin-top: 50px;
+            width: 40%;
+            margin-left: 40px;
+        }
+        #intro p:first-child{
+            color: blue;
+            font-weight: bold;
+        }
+        #intro h1 {
+            font-weight: bold;
+            font-size: 50px;
+            margin-top: -10px;
+        }
+        h1 + p {
+            color:gray;
+            font-size: 20px;
+        }
+        p + p {
+            color: gray;
+            font-size: 20px;
+        }
+        #pic {
+            width: 40%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 280px);
+            row-gap: 200px;  
+            margin-left: 100px;
+            margin-top: 30px;
+        }
+        #pic div {
+            width: 80%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            height: 400px;
+        }
+        #pic img {
+            width: 50%;
+            margin-left: 2%;
+        }
+        #pic img+h1 {
+            margin-left: 5%;
+            margin-top: -10px;
+            font-size: 25px;
+        }
+        #pic h1 + p {
+            margin-top: 15px;
+            margin-left: 5%;
+            text-align: justify;
+            margin-right: 15%;
+            line-height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>StudyLab</div>
+        <div id="box">
+            <div>Home</div>
+            <div>About</div>
+            <div>Course</div>
+            <div>Instructor</div>
+            <div>Blog</div>
+            <div>Contact</div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="intro">
+            <p>WELCOME TO STUDYLAB</p>
+            <h1>We Are Studylab An Online Learning Center</h1>
+            <p>
+                A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country,in which roasted parts of sentences fly into mouth.
+            </p>
+            <p>
+                Far far away, behind the word mountains, far from the countries Vakalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+            </p>
+        </div>
+        <div id="pic">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu152D-pxkzM6D9HfVHIAvYuqgtrVy9BPdNw&usqp=CAU" alt="">
+                <h1>Top quality Content</h1>
+                <p>A small river named Duden flows by their place and supplies </p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu152D-pxkzM6D9HfVHIAvYuqgtrVy9BPdNw&usqp=CAU" alt="">
+                <h1>Highly Skilled Instructor</h1>
+                <p>A small river named Duden flows by their place and supplies </p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu152D-pxkzM6D9HfVHIAvYuqgtrVy9BPdNw&usqp=CAU" alt="">
+                <h1>World Class & Quiz</h1>
+                <p>A small river named Duden flows by their place and supplies </p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu152D-pxkzM6D9HfVHIAvYuqgtrVy9BPdNw&usqp=CAU" alt="">
+                <h1>Get Certified</h1>
+                <p>A small river named Duden flows by their place and supplies </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

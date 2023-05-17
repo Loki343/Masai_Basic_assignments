@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <input id="name" type="text" placeholder="Product name" >
+        <br><br>
+        <input id="category" type="text" placeholder="Category">
+        <br><br>
+        <input id="image" type="text" placeholder="Image url">
+        <br><br>
+        <input id="price" type="text" placeholder="Price">
+        <br><br>
+        <select id="gender" name="Gender" id="">
+            <option value="">Gender</option>
+            <option value="male">Male Product</option>
+            <option value="female">Female Product</option>
+        </select>
+        <br><br>
+        <input id="sold" type="number" placeholder="Sold units">
+        <input type="submit" name="" id="submit">
+    </form>
+    
+</body>
+</html>
+
+<script>
+
+    let productArr=[];
+    document.querySelector("form").addEventListener("submit",productFunc)
+    function productFunc(event){
+        event.preventDefault();
+        let form = document.querySelector("#form");
+
+        let name = form.name.value;
+        let category = form.category.value;
+        let image = form.image.value;
+        let price = form.price.value;
+        let gender = form.gender.value;
+        let units = form.sold.value;
+        let product = new amazonProducts(name,category,image,price,gender,units);
+        productArr.push(product);
+        // console.log(productArr);
+        localStorage.setItem("Products",JSON.stringify(productArr))
+    }
+    
+    function amazonProducts(n,c,i,p,g,u){
+        this.name=n;
+        this.category=c;
+        this.image=i;
+        this.price=p;
+        this.gender=g;
+        this.units=u;
+    }
+    
+</script>
